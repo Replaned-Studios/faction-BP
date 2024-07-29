@@ -1,0 +1,118 @@
+{
+  "format_version": "1.16.100",
+  "minecraft:entity": {
+    "description": {
+      "identifier": "mrleefy:pigstill",
+      "is_spawnable": false,
+      "is_summonable": true,
+      "is_experimental": false,
+      "scripts": {
+        "animate": [
+          "start",
+          {
+            "pig_dead_summon": "!query.is_alive"
+          },
+          "bridge_execute_commands"
+        ]
+      },
+      "animations": {
+        "pig_dead_summon": "animation.pig_dead_summon",
+        "bridge_execute_commands": "controller.animation.bridge_pig.execute_commands"
+      }
+    },
+    "component_groups": {
+      "bridge:execute_command_id_1": {
+        "minecraft:skin_id": {
+          "value": 1
+        }
+      },
+      "bridge:execute_no_command": {
+        "minecraft:skin_id": {
+          "value": 0
+        }
+      }
+    },
+    "components": {
+      "minecraft:physics": {
+        "has_gravity": true,
+        "has_collision": true
+      },
+      "minecraft:pushable": {
+        "is_pushable": true,
+        "is_pushable_by_piston": true
+      },
+      "minecraft:push_through": {
+        "value": 1
+      },
+      "minecraft:experience_reward": {
+        "on_death": "query.last_hit_by_player ? 1 : 0"
+      },
+      "minecraft:loot": {
+        "table": "loot_tables/entities/pig.json"
+      },
+      "minecraft:collision_box": {
+        "width": 0.9,
+        "height": 0.9
+      },
+      "minecraft:nameable": {
+        "always_show": false,
+        "allow_name_tag_renaming": false
+      },
+      "minecraft:damage_sensor": {
+        "triggers": [
+          {
+            "cause": "entity_attack",
+            "deals_damage": true
+          },
+          {
+            "deals_damage": false
+          }
+        ]
+      },
+      "minecraft:health": {
+        "value": 1,
+        "max": 1
+      },
+      "minecraft:knockback_resistance": {
+        "value": 999999999,
+        "max": 999999999
+      },
+      "minecraft:despawn": {
+        "despawn_from_distance": {}
+      },
+      "minecraft:behavior.hurt_by_target": {
+        "priority": 1
+      },
+      "minecraft:behavior.random_look_around": {
+        "priority": 5
+      },
+      "minecraft:type_family": {
+        "family": ["pig", "mob"]
+      },
+      "minecraft:on_hurt": {
+        "event": "minecraft:on_hurt_event",
+        "target": "self"
+      },
+      "minecraft:on_hurt_by_player": {
+        "event": "minecraft:on_hurt_event",
+        "target": "self"
+      },
+      "minecraft:conditional_bandwidth_optimization": {}
+    },
+    "events": {
+      "minecraft:entity_spawned": {
+        "add": {
+          "component_groups": ["bridge:execute_command_id_1"]
+        }
+      },
+      "bridge:remove_command_id_1": {
+        "add": {
+          "component_groups": ["bridge:execute_no_command"]
+        },
+        "remove": {
+          "component_groups": ["bridge:execute_command_id_1"]
+        }
+      }
+    }
+  }
+}

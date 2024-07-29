@@ -1,0 +1,20 @@
+{
+  "format_version": "1.8.100",
+  "minecraft:recipe_shapeless": {
+    "description": {
+      "identifier": "mrleefy:endermanspawner8"
+    },
+    "tags": ["stonecutter"],
+    "ingredients": [
+      {
+        "item": "mrleefy:endermanspawner8"
+      }
+    ],
+    "result": [
+      {
+        "item": "mrleefy:endermanspawner",
+        "count": 8
+      }
+    ]
+  }
+}

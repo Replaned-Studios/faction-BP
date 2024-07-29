@@ -1,0 +1,20 @@
+{
+  "format_version": "1.9.100",
+  "minecraft:recipe_shapeless": {
+    "description": {
+      "identifier": "mrleefy:blazespawner9"
+    },
+    "tags": ["stonecutter"],
+    "ingredients": [
+      {
+        "item": "mrleefy:blazespawner9"
+      }
+    ],
+    "result": [
+      {
+        "item": "mrleefy:blazespawner",
+        "count": 9
+      }
+    ]
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "format_version": "1.16.100",
+  "minecraft:item": {
+    "description": {
+      "identifier": "soulless:menu",
+      "category": "construction"
+    },
+    "components": {
+      "minecraft:icon": {
+        "texture": "soulless_menu"
+      }
+    }
+  }
+}

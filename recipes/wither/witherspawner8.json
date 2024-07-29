@@ -1,0 +1,20 @@
+{
+  "format_version": "1.8.100",
+  "minecraft:recipe_shapeless": {
+    "description": {
+      "identifier": "mrleefy:witherspawner8"
+    },
+    "tags": ["stonecutter"],
+    "ingredients": [
+      {
+        "item": "mrleefy:witherspawner8"
+      }
+    ],
+    "result": [
+      {
+        "item": "mrleefy:witherspawner",
+        "count": 8
+      }
+    ]
+  }
+}

@@ -1,0 +1,17 @@
+{
+	"format_version": "1.16.100",
+	"minecraft:block": {
+		"description": {
+			"identifier": "soulless:safe_block"
+		},
+		"components": {
+			"minecraft:geometry": "geometry.black_block",
+		"minecraft:material_instances": {
+			"*": {
+				"texture": "soulless_safe_block",
+				"render_method": "alpha_test"
+			}
+		}
+	}
+	}
+}

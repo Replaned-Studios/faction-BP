@@ -1,0 +1,26 @@
+{
+  "format_version": "1.10.0",
+  "animation_controllers": {
+    "controller.animation.bridge_creeper.execute_commands": {
+      "states": {
+        "default": {
+          "transitions": [
+            {
+              "execute_command_id_1": "query.skin_id == 1"
+            }
+          ]
+        },
+        "execute_command_id_1": {
+          "transitions": [
+            {
+              "default": "query.skin_id != 1"
+            }
+          ],
+          "on_entry": [
+            "/execute as @e[type=mrleefy:creeperstill,name=\"§bCreeper\",tag=!main] run function entities/creeper/creeper_setup"
+          ]
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "format_version": "1.16.100",
+  "minecraft:recipe_shapeless": {
+    "description": {
+      "identifier": "mrleefy:iron_golem_spawner3"
+    },
+    "tags": ["stonecutter"],
+    "ingredients": [
+      {
+        "item": "mrleefy:iron_golem_spawner3"
+      }
+    ],
+    "result": [
+      {
+        "item": "mrleefy:iron_golem_spawner",
+        "count": 3
+      }
+    ]
+  }
+}

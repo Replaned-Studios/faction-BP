@@ -1,0 +1,20 @@
+{
+  "format_version": "1.6.100",
+  "minecraft:recipe_shapeless": {
+    "description": {
+      "identifier": "mrleefy:skeletonspawner6"
+    },
+    "tags": ["stonecutter"],
+    "ingredients": [
+      {
+        "item": "mrleefy:skeletonspawner6"
+      }
+    ],
+    "result": [
+      {
+        "item": "mrleefy:skeletonspawner",
+        "count": 6
+      }
+    ]
+  }
+}

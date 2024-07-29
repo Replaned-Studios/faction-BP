@@ -1,0 +1,20 @@
+{
+  "format_version": "1.16.100",
+  "minecraft:recipe_shapeless": {
+    "description": {
+      "identifier": "mrleefy:slimespawner3"
+    },
+    "tags": ["stonecutter"],
+    "ingredients": [
+      {
+        "item": "mrleefy:slimespawner3"
+      }
+    ],
+    "result": [
+      {
+        "item": "mrleefy:slimespawner",
+        "count": 3
+      }
+    ]
+  }
+}

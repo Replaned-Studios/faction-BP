@@ -1,0 +1,20 @@
+{
+  "format_version": "1.10.100",
+  "minecraft:recipe_shapeless": {
+    "description": {
+      "identifier": "mrleefy:magmacubespawner10"
+    },
+    "tags": ["stonecutter"],
+    "ingredients": [
+      {
+        "item": "mrleefy:magmacubespawner10"
+      }
+    ],
+    "result": [
+      {
+        "item": "mrleefy:magmacubespawner",
+        "count": 10
+      }
+    ]
+  }
+}

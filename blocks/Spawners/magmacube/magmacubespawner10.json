@@ -1,0 +1,102 @@
+{
+  "format_version": "1.16.100",
+  "minecraft:block": {
+    "description": {
+      "properties": {
+        "bridge:block_rotation": [2, 3, 4, 5]
+      },
+      "identifier": "mrleefy:magmacubespawner10"
+    },
+    "permutations": [
+      {
+        "condition": "query.block_property('bridge:block_rotation') == 2",
+        "components": {
+          "minecraft:rotation": [0, 180, 0]
+        }
+      },
+      {
+        "condition": "query.block_property('bridge:block_rotation') == 3",
+        "components": {
+          "minecraft:rotation": [0, 0, 0]
+        }
+      },
+      {
+        "condition": "query.block_property('bridge:block_rotation') == 4",
+        "components": {
+          "minecraft:rotation": [0, 270, 0]
+        }
+      },
+      {
+        "condition": "query.block_property('bridge:block_rotation') == 5",
+        "components": {
+          "minecraft:rotation": [0, 90, 0]
+        }
+      }
+    ],
+    "components": {
+      "minecraft:on_player_placing": {
+        "event": "bridge:update_rotation"
+      },
+      "minecraft:material_instances": {
+        "*": {
+          "render_method": "alpha_test",
+          "texture": "magmacubespawner"
+        }
+      },
+      "minecraft:geometry": "geometry.mrleefy",
+      "minecraft:destroy_time": 1,
+      "minecraft:explosion_resistance": 1,
+      "minecraft:map_color": "#B000CF",
+      "minecraft:pick_collision": {
+        "origin": [-8, 0, -8],
+        "size": [16, 16, 16]
+      },
+      "minecraft:entity_collision": {
+        "origin": [-8, 0, -8],
+        "size": [16, 16, 16]
+      },
+      "minecraft:block_light_emission": 0.1,
+      "minecraft:ticking": {
+        "looping": true,
+        "on_tick": {
+          "event": "spawn",
+          "target": "self"
+        },
+        "range": [35, 35]
+      },
+      "minecraft:on_interact": {
+        "event": "interact",
+        "target": "self"
+      },
+      "minecraft:on_player_destroyed": {
+        "event": "sounds"
+      }
+    },
+    "events": {
+      "bridge:update_rotation": {
+        "set_block_property": {
+          "bridge:block_rotation": "query.cardinal_facing_2d"
+        }
+      },
+      "spawn": {
+        "randomize": [
+          {
+            "run_command": {
+              "command": ["summon mrleefy:magmacubestill ~ ~1 ~"],
+              "target": "self"
+            }
+          }
+        ]
+      },
+      "sounds": {
+        "run_command": {
+          "command": [
+            "playsound random.break @a[r=3] ~~~ 1 1 1",
+            "function killspawnrule"
+          ],
+          "target": "self"
+        }
+      }
+    }
+  }
+}

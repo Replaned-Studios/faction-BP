@@ -1,0 +1,20 @@
+{
+  "format_version": "1.16.100",
+  "minecraft:recipe_shapeless": {
+    "description": {
+      "identifier": "mrleefy:pigspawner3"
+    },
+    "tags": ["stonecutter"],
+    "ingredients": [
+      {
+        "item": "mrleefy:pigspawner3"
+      }
+    ],
+    "result": [
+      {
+        "item": "mrleefy:pigspawner",
+        "count": 3
+      }
+    ]
+  }
+}

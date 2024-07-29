@@ -1,0 +1,27 @@
+//bridge-file-version: #0
+{
+  "format_version": "1.10.0",
+  "animation_controllers": {
+    "controller.animation.bridge_enderman.execute_commands": {
+      "states": {
+        "default": {
+          "transitions": [
+            {
+              "execute_command_id_1": "query.skin_id == 1"
+            }
+          ]
+        },
+        "execute_command_id_1": {
+          "transitions": [
+            {
+              "default": "query.skin_id != 1"
+            }
+          ],
+          "on_entry": [
+            "/execute @e[type=mrleefy:endermanstill,name=\"§bEnderman\",tag=!main] ~~~ function entities/enderman/enderman_setup"
+          ]
+        }
+      }
+    }
+  }
+}

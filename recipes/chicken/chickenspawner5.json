@@ -1,0 +1,20 @@
+{
+  "format_version": "1.16.100",
+  "minecraft:recipe_shapeless": {
+    "description": {
+      "identifier": "mrleefy:chickenspawner5"
+    },
+    "tags": ["stonecutter"],
+    "ingredients": [
+      {
+        "item": "mrleefy:chickenspawner5"
+      }
+    ],
+    "result": [
+      {
+        "item": "mrleefy:chickenspawner",
+        "count": 5
+      }
+    ]
+  }
+}

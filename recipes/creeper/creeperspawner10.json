@@ -1,0 +1,20 @@
+{
+  "format_version": "1.10.100",
+  "minecraft:recipe_shapeless": {
+    "description": {
+      "identifier": "mrleefy:creeperspawner10"
+    },
+    "tags": ["stonecutter"],
+    "ingredients": [
+      {
+        "item": "mrleefy:creeperspawner10"
+      }
+    ],
+    "result": [
+      {
+        "item": "mrleefy:creeperspawner",
+        "count": 10
+      }
+    ]
+  }
+}
