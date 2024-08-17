@@ -51,7 +51,7 @@ async function getActionBarLines(player, sideData) {
         sideData.Coordinates && `${SRconfig.DefaultSideBarData['Coordinates']} ${getCoordinates(player)}`,
         sideData.FactionInfo && player.factions.in && getFactionInfo(player),
             (sideData.RealmInfo) && `§7---------------------\n§3${(() => {
-                const EndDate = ForMatTimer(new Date('2024-08-01T00:00:00') - new Date())
+                const EndDate = ForMatTimer(new Date('2024-12-01T00:00:00') - new Date())
                 if (TimerHasEnded(EndDate)) {
                     Database.set('LockDown', true)
                     world.getPlayers().filter((v) => !ACconfig.OwnerNames.includes(v.name) && !ACconfig.Tags.skipPlayers.some((t) => v.hasTag(t)))
